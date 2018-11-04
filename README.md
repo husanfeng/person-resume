@@ -6,11 +6,11 @@
 
 ### 演示（请忽略渣渲染）
 
-![resume.gif](https://github.com/lyttonlee/pic/blob/master/resume.gif?raw=true)
+<!-- ![resume.gif](https://github.com/lyttonlee/pic/blob/master/resume.gif?raw=true) -->
 
 ### 在线地址
 
-githubPages: https://lyttonlee.github.io/
+<!-- githubPages: https://lyttonlee.github.io/ -->
 
 ## Build Setup
 
