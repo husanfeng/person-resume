@@ -3,7 +3,7 @@
     <h1>基本资料</h1>
     <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInUp">
       <div class="cont" v-if="show">
-        <img class="avatar" src="../../static/img/hsf.jpg" alt="">
+        <img class="avatar" src="../../static/img/hsf.JPG" alt="">
         <h2>博学之,审问之,慎思之,明辨之,笃行之</h2>
         <p>我叫胡三丰</p>
         <p>3年移动端和前端经验</p>
