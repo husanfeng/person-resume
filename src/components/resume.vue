@@ -40,7 +40,7 @@
       </div>
     </transition> -->
     <!-- 下方的下一页按钮 -->
-    <div class="next"><i class="iconfont icon-xiala setarrow" @click="nextPage"></i></div>
+    <div class="next"><i class="iconfont icon-xiala setarrow" @click="nextPage" :style="{color: `${nextStyle}` }"></i></div>
   </div>
 </template>
 <script>
@@ -59,6 +59,7 @@ export default {
   },
   data() {
     return {
+      nextStyle: "rgba(233, 234, 241, 0.8)",
       // ..
       // img: require("../../static/img/bg4.jpg"),
       clientHeight: "900px",
@@ -144,10 +145,13 @@ export default {
       // this.bgUrl = require("../../static/img/IMG_1891.jpg");
       this.bgUrl =
         "https://github.com/husanfeng/person-resume/blob/master/static/img/pc-bg2.jpg?raw=true";
+
+      this.nextStyle = "rgba(233, 234, 241, 0.8);";
     } else {
       // https://picsum.photos/1334/2000/?38
       this.bgUrl =
         "https://github.com/husanfeng/person-resume/blob/master/static/img/mobile-bg.jpg?raw=true";
+      this.nextStyle = "rgba(17, 42, 235, 0.8)";
     }
     console.log("ispc" + this.IsPC);
   }

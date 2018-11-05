@@ -50,7 +50,7 @@ export default {
           child: [
             { name: "java", background: "rgba(252, 247, 247, 0.3)" },
             { name: "四大组件", background: "rgba(252, 247, 247, 0.3)" },
-            { name: "屏幕适配", background: "rgba(252, 247, 247, 0.3)" },
+            { name: "fragment", background: "rgba(252, 247, 247, 0.3)" },
             { name: "架构搭建", background: "rgba(252, 247, 247, 0.3)" }
           ]
         },
