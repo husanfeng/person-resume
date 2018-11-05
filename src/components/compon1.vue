@@ -5,8 +5,8 @@
       <div class="cont" v-if="show">
         <img class="avatar" src="https://github.com/husanfeng/person-resume/blob/master/static/img/hsf.JPG?raw=true" alt="">
         <h2>博学之,审问之,慎思之,明辨之,笃行之</h2>
-        <p>我叫胡三丰</p>
-        <p>3年移动端和前端经验</p>
+        <h4>我叫胡三丰</h4>
+        <h4>3年移动端和前端经验</h4>
         <div class="state">
           <el-row :gutter="30">
             <template v-for="item in states">
@@ -14,7 +14,7 @@
                 <div class="iconBox">
                   <i class="iconfont iconSet" :class="item.icon"></i>
                 </div>
-                <p v-text="item.val"></p>
+                <h4 v-text="item.val"></h4>
               </el-col>
             </template>
           </el-row>

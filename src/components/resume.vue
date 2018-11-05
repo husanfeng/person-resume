@@ -141,7 +141,7 @@ export default {
     let a = this.IsPC();
     if (a) {
       // pc  url(require('./../assets/banner_top2.png'))
-      this.bgUrl = require("../../static/img/pc-bg.jpg");
+      this.bgUrl = require("../../static/img/pc-bg2.jpg");
     } else {
       // https://picsum.photos/1334/2000/?38
       this.bgUrl = require("../../static/img/mobile-bg.jpg");
@@ -249,7 +249,7 @@ export default {
       // position:relative;
       .position-bottom;
       font-size: 40px;
-      color: rgba(4, 10, 41, 0.8);
+      color: rgba(233, 234, 241, 0.8);
       opacity: 0.8;
       cursor: pointer;
       animation: myfirst 5s infinite;
