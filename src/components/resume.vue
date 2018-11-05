@@ -141,10 +141,13 @@ export default {
     let a = this.IsPC();
     if (a) {
       // pc  url(require('./../assets/banner_top2.png'))
-      this.bgUrl = require("../../static/img/pc-bg2.jpg");
+      // this.bgUrl = require("../../static/img/IMG_1891.jpg");
+      this.bgUrl =
+        "https://github.com/husanfeng/person-resume/blob/master/static/img/pc-bg2.jpg?raw=true";
     } else {
       // https://picsum.photos/1334/2000/?38
-      this.bgUrl = require("../../static/img/mobile-bg.jpg");
+      this.bgUrl =
+        "https://github.com/husanfeng/person-resume/blob/master/static/img/mobile-bg.jpg?raw=true";
     }
     console.log("ispc" + this.IsPC);
   }
