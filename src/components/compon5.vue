@@ -3,7 +3,7 @@
     <h1>项目经验</h1>
     <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
       <div class="cont" v-if="show">
-        <el-carousel :autoplay="false" height="500px">
+        <el-carousel :autoplay="false" type="card" height="500px">
           <el-carousel-item v-for="item in profiles" :key="item">
             <h2 v-text="item.name"></h2>
             <p v-text="'技术栈: ' + item.skills"></p>
@@ -24,7 +24,8 @@ export default {
       profiles: [
         {
           name: "华润医药商业-财务报账系统",
-          skills: "vue vue-cli vue-router vuex axios  echart iview webpack",
+          skills:
+            "vue vue-cli vue-router vuex axios echart iview webpack vscode Git",
           content:
             "项目介绍:<br />" +
             "1.财务报账系统是华润集团旗下各利润中心财务共享中心运营的核心系统，主要包括:发起报账申请，我的报账单，会计任务池，付款工作台等几大模块<br/>" +
@@ -44,8 +45,7 @@ export default {
         },
         {
           name: "nativescript跨平台app开发框架",
-          skills:
-            "node express mongoose mongodb3.4 express-promise-router async/await语法",
+          skills: "node.js js css html angular2 nativescript vscode svn ",
           content:
             "项目介绍:<br />" +
             "1.NativeScript是一个不使用webview的情况下构建跨平台并且原生的iOS和Android应用。<br />" +
@@ -62,8 +62,7 @@ export default {
         },
         {
           name: "mscmp App供应链",
-          skills:
-            "electron vue vue-cli vue-router axios qiniu nedb element-ui mavon-editor",
+          skills: "android androidStudio svn",
           content:
             "项目介绍:<br />" +
             "该项目主要包括 <br />" +
@@ -77,7 +76,7 @@ export default {
         },
         {
           name: "掌上徽商",
-          skills: "electron vue vue-cli element-ui",
+          skills: "android androidStudio svn",
           content:
             "项目介绍:<br />" +
             "一款介绍安徽风土人情的app，有历史，民俗，戏曲等等。",
@@ -94,7 +93,7 @@ export default {
         },
         {
           name: "运动客",
-          skills: "electron vue vue-cli element-ui",
+          skills: "android Eclipse svn",
           content:
             "项目介绍:<br />" +
             "有攻略，会运动。运动客，让运动成为一种信仰。这里汇集海量由运动达人、健身教练分享的各种健身、减肥、运动、瘦身、跑步实用攻略，更垂直、更细分、更专注的社交应用。 运动爱好者专属社区：看攻略，问难点，秀身材，结交志同道合的运动小伙伴。 口袋里的运动百科：达人答疑解惑，专家排忧解难，运动问题不是个事儿。",
