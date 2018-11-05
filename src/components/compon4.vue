@@ -16,7 +16,7 @@
         </div>
         <div class="contact">
           <h2>联系我</h2>
-          <p><i class="iconfont icon-shouji"></i> 13301220872</p>
+          <p @click="callPhone"><i class="iconfont icon-shouji"></i> 13301220872</p>
           <p><i class="iconfont icon-youxiang"></i> 18755106041@163.com</p>
         </div>
         <div class="acount">
@@ -72,6 +72,9 @@ export default {
       setTimeout(() => {
         this.show = true;
       }, 1000);
+    },
+    callPhone() {
+      window.location.href = "tel://" + 13301220872;
     }
   },
   mounted() {
