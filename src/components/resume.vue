@@ -1,6 +1,6 @@
 <template>
   <div class="resume" @mousewheel="mouse" :style="{
-    backgroundImage:`url(https://picsum.photos/1500/700/?500)`,
+    backgroundImage:`${bgUrl}`,
     height: `${clientHeight}`
   }">
     <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
@@ -62,6 +62,7 @@ export default {
       // ..
       // img: require("../../static/img/bg4.jpg"),
       clientHeight: "900px",
+      bgUrl: `url(https://picsum.photos/1500/700/?500)`,
       init: 1,
       lastscroll: 0,
       leaveanimate: "zoomOutUp",
@@ -105,6 +106,26 @@ export default {
       } else {
         this.init = this.init + 1;
       }
+    },
+    IsPC() {
+      debugger;
+      var userAgentInfo = navigator.userAgent;
+      var Agents = [
+        "Android",
+        "iPhone",
+        "SymbianOS",
+        "Windows Phone",
+        "iPad",
+        "iPod"
+      ];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
     }
   },
   mounted() {
@@ -114,6 +135,18 @@ export default {
       this.clientHeight = `${document.documentElement.clientHeight}px`;
       console.log(this.clientHeight);
     };
+  },
+  created() {
+    debugger;
+    let a = this.IsPC();
+    if (a) {
+      // pc
+      this.bgUrl = `url(https://picsum.photos/1500/700/?500)`;
+    } else {
+      // https://picsum.photos/1334/2000/?38
+      this.bgUrl = `url(https://picsum.photos/1334/2000/?38)`;
+    }
+    console.log("ispc" + this.IsPC);
   }
 };
 </script>

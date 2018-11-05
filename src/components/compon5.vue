@@ -3,7 +3,7 @@
     <h1>项目经验</h1>
     <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
       <div class="cont" v-if="show">
-        <el-carousel :autoplay="false" type="card" height="500px">
+        <el-carousel :autoplay="false" arrow="always" height="500px">
           <el-carousel-item v-for="item in profiles" :key="item">
             <h2 v-text="item.name"></h2>
             <p v-text="'技术栈: ' + item.skills"></p>
