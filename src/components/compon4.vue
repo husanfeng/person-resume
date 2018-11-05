@@ -22,17 +22,17 @@
         <div class="acount">
           <el-row>
             <!-- <template v-for="item in accounts"> -->
-            <el-col :span="6">
+            <el-col class="el-col-6" :span="6">
               <div class="iconBox">
                 <a href="https://github.com/husanfeng"><img src="../../static/img/GitHub.png" style="marginTop:5px"></a>
               </div>
             </el-col>
-            <el-col :span="6">
+            <el-col class="el-col-6" :span="6">
               <div class="iconBox">
                 <a href="https://www.npmjs.com/~husanfeng"><img src="../../static/img/npm.png" style="marginTop:5px"></a>
               </div>
             </el-col>
-            <el-col :span="6">
+            <el-col class="el-col-6" :span="6">
               <div class="iconBox">
                 <a href="http://www.cnblogs.com/husfBK/"><img src="../../static/img/bokeyuan.png" style="marginTop:5px"></a>
               </div>
@@ -81,6 +81,9 @@ export default {
 </script>
 <style lang="less" scoped>
 @import "../less/index.less";
+.el-col-6 {
+  width: 33%;
+}
 a {
   text-decoration: none;
 }
@@ -93,14 +96,14 @@ a {
     border-radius: 25px;
     padding: 30px 0;
     .acount {
-      width: 30%;
-      margin: 20px auto;
+      width: 100%;
+      margin: auto auto;
       .iconBox {
         width: 40px;
         height: 40px;
         border-radius: 20px;
         border: 1px solid rgba(9, 92, 49, 0.5);
-        margin: 20px auto;
+        margin: auto auto;
         background-color: rgba(13, 73, 87, 0.4);
         &:hover {
           background-color: rgba(13, 73, 87, 0.8);

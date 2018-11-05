@@ -1,6 +1,6 @@
 <template>
   <div class="resume" @mousewheel="mouse" :style="{
-    backgroundImage:`${bgUrl}`,
+    backgroundImage:`url(${bgUrl})`,
     height: `${clientHeight}`
   }">
     <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
@@ -140,11 +140,11 @@ export default {
     debugger;
     let a = this.IsPC();
     if (a) {
-      // pc
-      this.bgUrl = `url(https://picsum.photos/1500/700/?500)`;
+      // pc  url(require('./../assets/banner_top2.png'))
+      this.bgUrl = require("../../static/img/pc-bg.jpg");
     } else {
       // https://picsum.photos/1334/2000/?38
-      this.bgUrl = `url(https://picsum.photos/1334/2000/?38)`;
+      this.bgUrl = require("../../static/img/mobile-bg.jpg");
     }
     console.log("ispc" + this.IsPC);
   }

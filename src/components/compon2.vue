@@ -45,7 +45,7 @@ export default {
           ]
         },
         {
-          name: "移动端Android",
+          name: "Android",
           background: "rgba(252, 247, 247, 0.3)",
           child: [
             { name: "java", background: "rgba(252, 247, 247, 0.3)" },
