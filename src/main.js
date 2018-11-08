@@ -6,7 +6,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import animate from 'animate.css'
 import App from './App'
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(animate)
 /* eslint-disable no-new */
