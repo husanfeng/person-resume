@@ -3,7 +3,8 @@
         <h1>基本资料</h1>
         <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInUp">
             <div class="cont" v-if="show">
-                <img class="avatar" src="https://github.com/husanfeng/person-resume/blob/master/static/img/hsf.JPG?raw=true" alt="">
+                <!-- <img class="avatar" src="https://github.com/husanfeng/person-resume/blob/master/static/img/hsf.JPG?raw=true" alt=""> -->
+                <img class="avatar" src="../../static/img//hsf.JPG" alt="">
                 <h2>优秀的判断来自经验,但经验来自错误的判断</h2>
                 <h4>我叫胡三丰</h4>
                 <h4>3年移动端和前端经验</h4>
