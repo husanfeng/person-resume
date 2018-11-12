@@ -1,20 +1,20 @@
 <template>
-  <div class="info">
-    <h1>项目经验</h1>
-    <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
-      <div class="cont" v-if="show">
-        <el-carousel :autoplay="false" arrow="always" height="500px">
-          <el-carousel-item v-for="item in profiles" :key="item">
-            <h2 v-text="item.name"></h2>
-            <p v-text="'技术栈: ' + item.skills"></p>
-            <p v-html="item.content" style="text-align: left;"></p>
-            <p v-html="item.mySkills" style="text-align: left;"></p>
-            <!-- <p v-text="'github地址: ' + item.github"></p> -->
-          </el-carousel-item>
-        </el-carousel>
-      </div>
-    </transition>
-  </div>
+    <div class="info">
+        <h1 style=" color: rgba(220, 228, 220, 1)">项目经验</h1>
+        <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
+            <div class="cont" v-if="show">
+                <el-carousel :autoplay="false" arrow="always" height="500px">
+                    <el-carousel-item v-for="item in profiles" :key="item">
+                        <h2 v-text="item.name"></h2>
+                        <p v-text="'技术栈: ' + item.skills"></p>
+                        <p v-html="item.content" style="text-align: left;"></p>
+                        <p v-html="item.mySkills" style="text-align: left;"></p>
+                        <!-- <p v-text="'github地址: ' + item.github"></p> -->
+                    </el-carousel-item>
+                </el-carousel>
+            </div>
+        </transition>
+    </div>
 </template>
 <script>
 export default {

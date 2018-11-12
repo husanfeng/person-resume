@@ -1,23 +1,23 @@
 <template>
-  <div class="info">
-    <h1>作品集</h1>
-    <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
-      <div class="cont" v-if="show">
-        <el-row :gutter="20">
-          <template v-for="item in profiles">
-            <el-col :key="item.name" :span="12" :xs="24">
-              <div class="item">
-                <h2 v-text="item.name"></h2>
-                <p v-text="'技术栈: ' + item.skills"></p>
-                <p v-text="item.content"></p>
-                <p v-text="'github地址: ' + item.github"></p>
-              </div>
-            </el-col>
-          </template>
-        </el-row>
-      </div>
-    </transition>
-  </div>
+    <div class="info">
+        <h1 style=" color: rgba(220, 228, 220, 1)">作品集</h1>
+        <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInRight">
+            <div class="cont" v-if="show">
+                <el-row :gutter="20">
+                    <template v-for="item in profiles">
+                        <el-col :key="item.name" :span="12" :xs="24">
+                            <div class="item">
+                                <h2 v-text="item.name"></h2>
+                                <p v-text="'技术栈: ' + item.skills"></p>
+                                <p v-text="item.content"></p>
+                                <p v-text="'github地址: ' + item.github"></p>
+                            </div>
+                        </el-col>
+                    </template>
+                </el-row>
+            </div>
+        </transition>
+    </div>
 </template>
 <script>
 export default {

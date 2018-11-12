@@ -1,31 +1,31 @@
 <template>
-  <div class="info">
-    <h1>技术栈</h1>
-    <transition :duration="{ enter: 2500, leave: 1500 }" leave-active-class="animated fadeOutRight" enter-active-class="animated fadeInLeft">
-      <div class="cont" v-if="show">
-        <template v-for="skill in skills">
-          <el-row :gutter="20" :key="skill.name">
-            <el-col :span="8">
-              <div class="left" :style="{backgroundColor: `${skill.background}`}">
-                <h2>{{skill.name}}</h2>
-              </div>
-            </el-col>
-            <el-col :span="16">
-              <el-row :gutter="10">
-                <template v-for="child in skill.child">
-                  <el-col :span="12" :key="child.name">
-                    <div class="right" :style="{backgroundColor: child.background}">
-                      <h3>{{child.name}}</h3>
-                    </div>
-                  </el-col>
+    <div class="info">
+        <h1 style=" color: rgba(220, 228, 220, 1)">技术栈</h1>
+        <transition :duration="{ enter: 2500, leave: 1500 }" leave-active-class="animated fadeOutRight" enter-active-class="animated fadeInLeft">
+            <div class="cont" v-if="show">
+                <template v-for="skill in skills">
+                    <el-row :gutter="20" :key="skill.name">
+                        <el-col :span="8">
+                            <div class="left" :style="{backgroundColor: `${skill.background}`}">
+                                <h2>{{skill.name}}</h2>
+                            </div>
+                        </el-col>
+                        <el-col :span="16">
+                            <el-row :gutter="10">
+                                <template v-for="child in skill.child">
+                                    <el-col :span="12" :key="child.name">
+                                        <div class="right" :style="{backgroundColor: child.background}">
+                                            <h3>{{child.name}}</h3>
+                                        </div>
+                                    </el-col>
+                                </template>
+                            </el-row>
+                        </el-col>
+                    </el-row>
                 </template>
-              </el-row>
-            </el-col>
-          </el-row>
-        </template>
-      </div>
-    </transition>
-  </div>
+            </div>
+        </transition>
+    </div>
 </template>
 <script>
 export default {

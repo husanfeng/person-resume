@@ -1,6 +1,6 @@
 <template>
     <div class="info">
-        <h1>基本资料</h1>
+        <h1 style=" color: rgba(220, 228, 220, 1)">基本资料</h1>
         <transition :duration="{ enter: 2500, leave: 1500 }" enter-active-class="animated fadeInUp">
             <div class="cont" v-if="show">
                 <!-- <img class="avatar" src="https://github.com/husanfeng/person-resume/blob/master/static/img/hsf.JPG?raw=true" alt=""> -->
