@@ -1,3 +1,4 @@
+'use strict'
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
@@ -39,7 +40,19 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                options: vueLoaderConfig
+                options: {
+                    postcss: [require('autoprefixer')({ browsers: ['last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie > 8'] })],
+                    loaders: {
+                        less: ExtractTextPlugin.extract({
+                            use: ['css-loader?minimize', { loader: 'postcss-loader', options: { sourceMap: true } }, 'less-loader'],
+                            fallback: "style-loader"
+                        }),
+                        css: ExtractTextPlugin.extract({
+                            use: ['css-loader', { loader: 'postcss-loader', options: { sourceMap: true } }],
+                            fallback: "style-loader"
+                        })
+                    }
+                }
             },
             {
                 test: /\.js$/,
