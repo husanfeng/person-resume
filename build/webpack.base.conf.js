@@ -43,14 +43,14 @@ module.exports = {
                 options: {
                     postcss: [require('autoprefixer')({ browsers: ['last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie > 8'] })],
                     loaders: {
-                        less: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize', { loader: 'postcss-loader', options: { sourceMap: true } }, 'less-loader'],
-                            fallback: "style-loader"
-                        }),
-                        css: ExtractTextPlugin.extract({
-                            use: ['css-loader', { loader: 'postcss-loader', options: { sourceMap: true } }],
-                            fallback: "style-loader"
-                        })
+                        // less: ExtractTextPlugin.extract({
+                        //     use: ['css-loader?minimize', { loader: 'postcss-loader', options: { sourceMap: true } }, 'less-loader'],
+                        //     fallback: "style-loader"
+                        // }),
+                        // css: ExtractTextPlugin.extract({
+                        //     use: ['css-loader', { loader: 'postcss-loader', options: { sourceMap: true } }],
+                        //     fallback: "style-loader"
+                        // })
                     }
                 }
             },
@@ -59,21 +59,21 @@ module.exports = {
                 loader: 'babel-loader',
                 include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
             },
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize', { loader: 'postcss-loader', options: { sourceMap: true } }],
-                    fallback: 'style-loader'
-                })
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: ExtractTextPlugin.extract({
+            //         use: ['css-loader?minimize', { loader: 'postcss-loader', options: { sourceMap: true } }],
+            //         fallback: 'style-loader'
+            //     })
+            // },
 
-            {
-                test: /\.less/,
-                use: ExtractTextPlugin.extract({
-                    use: [{ loader: 'postcss-loader', options: { sourceMap: true } }, 'less-loader'],
-                    fallback: 'style-loader'
-                })
-            },
+            // {
+            //     test: /\.less/,
+            //     use: ExtractTextPlugin.extract({
+            //         use: [{ loader: 'postcss-loader', options: { sourceMap: true } }, 'less-loader'],
+            //         fallback: 'style-loader'
+            //     })
+            // },
             // {
             //   test: /\.(png|jpg|jpe?g|gif|svg)(\?.*)?$/,
             //   loader: 'url-loader',
