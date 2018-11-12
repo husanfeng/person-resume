@@ -1,47 +1,47 @@
 <template>
-  <div class="resume" @mousewheel="mouse" :style="{
+    <div class="resume" @mousewheel="mouse" :style="{
     backgroundImage:`url(${bgUrl})`,
     height: `${clientHeight}`
   }">
-    <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
-      <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 1">
-        <div class="sec">
-          <Con1></Con1>
-        </div>
-      </div>
-    </transition>
-    <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
-      <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 2">
-        <div class="sec">
-          <Con2></Con2>
-        </div>
-      </div>
-    </transition>
-    <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
-      <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 3">
-        <div class="sec">
-          <Con5></Con5>
-        </div>
-      </div>
-    </transition>
-    <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
-      <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 4">
-        <div class="sec">
-          <Con4></Con4>
-        </div>
-      </div>
-    </transition>
+        <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
+            <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 1">
+                <div class="sec">
+                    <Con1></Con1>
+                </div>
+            </div>
+        </transition>
+        <transition :duration="{ enter: 2500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
+            <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 2">
+                <div class="sec">
+                    <Con2></Con2>
+                </div>
+            </div>
+        </transition>
+        <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
+            <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 3">
+                <div class="sec">
+                    <Con5></Con5>
+                </div>
+            </div>
+        </transition>
+        <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
+            <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 4">
+                <div class="sec">
+                    <Con4></Con4>
+                </div>
+            </div>
+        </transition>
 
-    <!-- <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
+        <!-- <transition :duration="{ enter: 1500, leave: 1500 }" :leave-active-class="'animated ' + leaveanimate" :enter-active-class="'animated ' + enteranimate">
       <div class="section" :style="{height: `${clientHeight}`}" v-if="init === 5">
         <div class="sec">
           <Con5></Con5>
         </div>
       </div>
     </transition> -->
-    <!-- 下方的下一页按钮 -->
-    <div class="next"><i class="iconfont icon-xiala setarrow" @click="nextPage" :style="{color: `${nextStyle}` }"></i></div>
-  </div>
+        <!-- 下方的下一页按钮 -->
+        <div class="next"><i class="iconfont icon-xiala setarrow" @click="nextPage" :style="{color: `${nextStyle}` }"></i></div>
+    </div>
 </template>
 <script>
 import Con1 from "@/components/compon1";
@@ -142,15 +142,16 @@ export default {
     let a = this.IsPC();
     if (a) {
       // pc  url(require('./../assets/banner_top2.png'))
-      // this.bgUrl = require("../../static/img/IMG_1891.jpg");
-      this.bgUrl =
-        "https://github.com/husanfeng/person-resume/blob/master/static/img/pc-bg2.jpg?raw=true";
+      this.bgUrl = require("../../static/img/pc-bg2.jpg");
+      //   this.bgUrl =
+      //     "https://github.com/husanfeng/person-resume/blob/master/static/img/pc-bg2.jpg?raw=true";
 
       this.nextStyle = "rgba(233, 234, 241, 0.8);";
     } else {
       // https://picsum.photos/1334/2000/?38
-      this.bgUrl =
-        "https://github.com/husanfeng/person-resume/blob/master/static/img/mobile-bg.jpg?raw=true";
+      this.bgUrl = require("../../static/img/mobile-bg.jpg");
+      //   this.bgUrl =
+      //     "https://github.com/husanfeng/person-resume/blob/master/static/img/mobile-bg.jpg?raw=true";
       this.nextStyle = "rgba(17, 42, 235, 0.8)";
     }
     console.log("ispc" + this.IsPC);
