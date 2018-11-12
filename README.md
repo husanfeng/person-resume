@@ -10,7 +10,7 @@
 
 ### 在线地址
 
-<!-- githubPages: https://lyttonlee.github.io/ -->
+githubPages: https://husanfeng.github.io/person-resume/
 
 ## Build Setup
 
